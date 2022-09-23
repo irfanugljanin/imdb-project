@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navigation-container {
+  width: 100%;
+  height: 56px;
+  padding: 0 150px;
+  background-color: rgb(12, 12, 12);
+
+  display: flex;
+  align-items: center;
+}
+
+.navigation-logo {
+  height: 100%;
+  width: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-logo img {
+  width: 40px;
+}
