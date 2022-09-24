@@ -12,6 +12,7 @@ const Nav = () => {
         />
       </div>
       <Input
+        className="search-input"
         icon={<IconSearch />}
         variant="filled"
         placeholder="Search"
