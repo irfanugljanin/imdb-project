@@ -2,17 +2,17 @@ import { Carousel } from "@mantine/carousel";
 import { IconArrowRight, IconArrowLeft } from "@tabler/icons";
 import { imdbapi } from "../../../../../api/api";
 import { useEffect, useState } from "react";
-import dummy from "../../../../../data.json";
+// import dummy from "../../../../../data.json";
 
 const MainCarousel = () => {
   const [topMovies, setTopMovies] = useState([]);
   const key = "k_69jime14";
   const fetchMovies = async () => {
     try {
-      // const result = await imdbapi.get(`/en/API/ComingSoon/${key}/`);
-      // const data = result.data;
-      console.log(dummy);
-      setTopMovies(dummy.items);
+      const result = await imdbapi.get(`/en/API/Title/${key}/tt1375666`);
+      const data = result.data;
+      console.log(data.similars);
+      setTopMovies(data.similars);
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +34,11 @@ const MainCarousel = () => {
         {topMovies.map((item) => {
           return (
             <Carousel.Slide key={item.id}>
-              <img src={item.image} alt={item.fullTitle} />
+              <img
+                style={{ maxHeight: "100%" }}
+                src={item.image}
+                alt={item.fullTitle}
+              />
             </Carousel.Slide>
           );
         })}
