@@ -6,5 +6,17 @@
 .body-container {
   width: 100%;
   background-color: black;
-  padding: 48px 150px;
+  padding: 8px 150px;
+  display: flex;
+}
+
+.browse-trailers {
+  height: 100%;
+  padding: 0 16px;
+}
+
+.up-next {
+  color: #f5c518;
+  font-size: 20px;
+  font-weight: bold;
 }

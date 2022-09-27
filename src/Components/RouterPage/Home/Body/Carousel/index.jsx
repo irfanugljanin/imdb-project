@@ -1,8 +1,7 @@
 import { Carousel } from "@mantine/carousel";
-import { IconArrowRight, IconArrowLeft } from "@tabler/icons";
+import { IconChevronRight, IconChevronLeft } from "@tabler/icons";
 import { imdbapi } from "../../../../../api/api";
 import { useEffect, useState } from "react";
-// import dummy from "../../../../../data.json";
 
 const MainCarousel = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -25,17 +24,18 @@ const MainCarousel = () => {
   return (
     <>
       <Carousel
-        sx={{ maxWidth: 640 }}
+        sx={{ maxWidth: 800 }}
         mx="0"
-        height={400}
-        nextControlIcon={<IconArrowRight size={16} />}
-        previousControlIcon={<IconArrowLeft size={16} />}
+        height={520}
+        controlSize={50}
+        nextControlIcon={<IconChevronRight size={24} />}
+        previousControlIcon={<IconChevronLeft size={24} />}
       >
         {topMovies.map((item) => {
           return (
             <Carousel.Slide key={item.id}>
               <img
-                style={{ maxHeight: "100%" }}
+                style={{ width: "100%", verticalAlign: "middle" }}
                 src={item.image}
                 alt={item.fullTitle}
               />
