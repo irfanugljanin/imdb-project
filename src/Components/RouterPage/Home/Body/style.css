@@ -19,4 +19,16 @@
   color: #f5c518;
   font-size: 20px;
   font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.trailers {
+  overflow: hidden;
+  background: linear-gradient(
+    0deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(18, 18, 18, 0.7) 78%,
+    rgb(18, 18, 18) 100%
+  );
 }

@@ -8,6 +8,11 @@ const Body = () => {
       <MainCarousel />
       <div className="browse-trailers">
         <p className="up-next">Up Next</p>
+        <div className="trailers">
+          <div style={{ width: "300px", height: "100px" }}></div>
+          <div style={{ width: "300px", height: "100px" }}></div>
+          <div style={{ width: "300px", height: "100px" }}></div>
+        </div>
       </div>
 
       <Outlet />
